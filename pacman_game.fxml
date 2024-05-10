@@ -1,0 +1,26 @@
+<?import pacman_game.PacMan_View?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.BorderPane?>
+
+<?import javafx.scene.image.ImageView?>
+<BorderPane fx:controller="pacman_game.PacMan_Controller" style="-fx-background-color: black;" xmlns:fx="http://javafx.com/fxml">
+    <top>
+        <BorderPane prefHeight="35" style="-fx-background-color: #ca33fc; -fx-padding: 10px, 5px, 10px, 5px" >
+            <left><Label fx:id="scoreLabel" style="-fx-font-size: 150%; -fx-text-fill: white" prefWidth="100" /></left>
+            <center>
+                <ImageView fx:id="imageView" fitWidth="100" fitHeight="25" />
+            </center>
+            <right><Label fx:id="levelLabel" style="-fx-font-size: 150%; -fx-text-fill: white"/></right>
+        </BorderPane>
+    </top>
+    <center>
+        <PacMan_View fx:id="pacManView" rowCount="21" columnCount="19" />
+    </center>
+    <bottom>
+        <HBox prefHeight="35" style="-fx-padding: 10px, 5px, 10px, 5px; -fx-background-color: #ca33fc">
+            <Label style="-fx-font-size: 100%; -fx-text-fill: white"
+                   text="New game Press: S" />
+        </HBox>
+    </bottom>
+</BorderPane>
